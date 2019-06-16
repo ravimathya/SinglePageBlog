@@ -21,8 +21,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('singlepageblog.urls')),
-    path('singlepageblog/', include('singlepageblog.urls')),
-
 ]
 
 if settings.DEBUG:

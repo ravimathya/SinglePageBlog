@@ -16,13 +16,13 @@ def index(request):
     return render(request, 'blog/blog.html', context)
 
 
-def blog_detail(request, slug=None):
+def blog_detail(request):
     # Blog is model and slug is used for query.
     instance = get_object_or_404(Blog, slug=slug)
     context = {
         "instance": instance
     }
-    return render(request, 'blog/blogDetail.html', context)
+    return render(request, 'blog/blogDetails.html', context)
 
 
 def blog_tag(request, name=None):
